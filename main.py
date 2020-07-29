@@ -15,7 +15,7 @@ app.secret_key = 'namsonkimbaesungjoo'
 
 @app.route('/welcome')
 def welcome():
-    return render_template('index.html')
+    return render_template('welcome_page.html')
 @app.route('/signin')
 def signin():
    return render_template('signin_page.html')
