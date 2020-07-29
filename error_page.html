@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Error Page</title>
+    <link rel="stylesheet" href="static/CSS/style.css">
+    <script src = "static/validations.js" ></script>
+</head>
+<body>
+    <form id="login_form" >
+        <div class="login">
+            <div class="login-screen">
+                <div class="login-form">
+                    <div class="control-group">
+                        <div id="errpwd"  class ="validation_error">  Invalid credentials  </div>
+                    </div>
+                    <div class="control-group">
+                        <input type="button" value="Register" class="btn btn-primary btn-large btn-block" onclick="window.location.href='http://localhost:5000/signup'">
+                    </div>
+                    <div class="control-group">
+                        <input type="button" value="Back to login" onclick="window.location.href='http://localhost:5000/login'" class="btn btn-primary btn-large btn-block" >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
