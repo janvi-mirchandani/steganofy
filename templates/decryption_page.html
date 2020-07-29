@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Decryption Page</title>
+    <link rel="stylesheet" href="static/CSS/style.css">
+    <script src = "static/validations.js" ></script>
+</head>
+<body id = "images_list">
+<div class="screen">
+    <div class="app-title-images">
+        <div class="app-title">
+            <h1>Decryption</h1>
+        </div>
+        <h2>Select an Image to Decrypt :</h2>
+    </div>
+    <!--<a onclick="popUpWindow('http://localhost:5000/decrypt','_blank','400','300');" href="javascript:void(0);">CLICK TO OPEN POP-UP</a>-->
+    {% for image in images_list %}
+    <div class="control-group-image">
+        <form id="login_form" action="http://localhost:5000/message" method="POST" onsubmit = "return(decrypt('{{image}}'));">
+            <input class="image_input" type="image" id="{{image}}" value = "{{image}}" src="{{ url_for('static', filename='uploads/'+image) }}" name="{{image}}" alt="Submit"  height="90" >
+        </form>
+    </div>
+    {% endfor %}
+    <br>
+    <div class="control-group">
+        <div class="trial">
+        <input type="button" value="Back to Home" onclick="window.location.href='http://localhost:5000/backtohome'" class="btn btn-primary btn-large btn-block" >
+        </div>
+    </div>
+    <br>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Encryption Page</title>
+    <link rel="stylesheet" href="static/CSS/style.css">
+    <script src = "static/validations.js" ></script>
+</head>
+<body>
+    <form id="encrypt_form" action="http://localhost:5000/encryption" method="POST" onsubmit = "return(validate_encrypt());" enctype = "multipart/form-data">
+        <div class="login">
+            <div class="encrypt-screen">
+                <div class="app-title">
+                    <h1>Encryption</h1>
+                </div>
+                <div class="login-form">
+                    <div class="control-group">
+                          <label for="oldpath">Enter the path of the image file  :</label>
+                          <input  type="file" id="oldpath" name="oldpath"><br>
+                    </div>
+                    <div class="control-group">
+                        <div id="erroldpath"  class ="validation_error"> </div>
+                    </div>
+                    <div class="control-group">
+                        <label for="msg">Enter the message to be hidden :</label>
+                        <input  type="textarea" onkeyup="charcount(this.value)" id="msg" name="msg" maxlength="2500" oninput="check_msg()"><br>
+                    </div>
+                    <div class="control-group">
+                        <div id="errmsg"  class ="validation_error"> </div>
+                    </div>
+                    <div class="control-group">
+                        <div id="charrem"  class ="char_rem_count"> </div>
+                    </div>
+                    <div class="control-group">
+                        <label for="newpath">Enter the new filename :</label>
+                        <input  type="text" id="newpath" name="newpath" oninput="check_fname()"><br>
+                    </div>
+                    <div class="control-group">
+                        <div id="errnewpath"  class ="validation_error"> </div>
+                    </div>
+                    <input type="submit" value="Encrypt" class="btn btn-primary btn-large btn-block">
+                    <label class="dash">------------------------------------------------</label>
+                    <input type="submit" value="Go Back" class="btn btn-primary btn-large btn-block" onclick="window.location.href='http://localhost:5000/backtohome'">
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

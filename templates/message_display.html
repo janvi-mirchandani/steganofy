@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Message Page</title>
+    <link rel="stylesheet" href="static/CSS/style.css">
+    <script src = "static/validations.js" ></script>
+</head>
+<body>
+<div id = "images_list">
+    <div class="app-title-images">
+        <div id='fademe'>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        {{ message }}
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
+        <h2 >The decrypted message is</h2>
+    </div>
+    <div class="control-group-image">
+        {{decrpt_message}}
+    </div>
+    <br>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
