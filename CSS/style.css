@@ -7,6 +7,7 @@ outline: none;
 body {
     font-family: Arial;
     padding: 50px;
+    background-color: #33cccc;
     background-image: url("Images/background.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
