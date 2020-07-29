@@ -13,8 +13,8 @@ mysql.init_app(app)
 app = Flask(__name__, instance_path='C:\\Users\\janvi\\PycharmProjects\\Steganography\\venv\\Lib\\static\\uploads\\')
 app.secret_key = 'namsonkimbaesungjoo'
 
-@app.route('/welcome')
-def welcome():
+@app.route('/index')
+def index():
     return render_template('index.html')
 @app.route('/signin')
 def signin():
